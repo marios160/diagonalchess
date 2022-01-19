@@ -12,31 +12,10 @@ namespace DiagonalChess.Pieces
     {
         public override void OnClick()
         {
-
-
             SetDot(1, -1);
             SetDot(-1, 1);
             SetDot(1, 1);
             SetDot(-1, -1);
-
-
-            //if (!IsOccupied(Row - 1, Column) && Row > 0)
-            //{
-            //    ChessBoard.Pieces.Add(new DotPiece() { Row = Row - 1, Column = Column, Piece = this, IsBlack = false });
-            //}
-            //if(Row == 6 && !IsOccupied(Row - 2, Column))
-            //{
-            //    ChessBoard.Pieces.Add(new DotPiece() { Row = Row - 2, Column = Column, Piece = this, IsBlack = false });
-            //}
-            //if (IsToHit(Row - 1, Column + 1))
-            //{
-            //    ChessBoard.Pieces.Add(new CirclePiece() { Row = Row - 1, Column = Column + 1, Piece = this, IsBlack = false });
-            //}
-            //if (IsToHit(Row - 1, Column - 1))
-            //{
-            //    ChessBoard.Pieces.Add(new CirclePiece() { Row = Row - 1, Column = Column - 1, Piece = this, IsBlack = false });
-            //}
-
         }
 
         public void SetDot(int x, int y)
@@ -45,7 +24,7 @@ namespace DiagonalChess.Pieces
             int row = Row + point.Y;
             int col = Column + point.X;
 
-            do
+            while (!IsOccupied(row, col))
             {
                 if (col > 7)
                 {
@@ -75,7 +54,11 @@ namespace DiagonalChess.Pieces
                 ChessBoard.Pieces.Add(new DotPiece() { Row = row, Column = col, Piece = this, IsBlack = IsBlack });
                 row += point.Y;
                 col += point.X;
-            } while (!IsOccupied(row, col));
+            }
+            if (IsToHit(row, col))
+            {
+                ChessBoard.Pieces.Add(new CirclePiece() { Row = row, Column = col, Piece = this, IsBlack = IsBlack });
+            }
         }
 
     }
