@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\BlackBishop.png" />
+    <None Remove="Resources\BlackKing.png" />
+    <None Remove="Resources\BlackKnight.png" />
+    <None Remove="Resources\BlackPawn.png" />
+    <None Remove="Resources\BlackQueen.png" />
+    <None Remove="Resources\BlackTower.png" />
+    <None Remove="Resources\Circle.png" />
+    <None Remove="Resources\Dot.png" />
+    <None Remove="Resources\WhiteBishop.png" />
+    <None Remove="Resources\WhiteKing.png" />
+    <None Remove="Resources\WhiteKnight.png" />
+    <None Remove="Resources\WhitePawn.png" />
+    <None Remove="Resources\WhiteQueen.png" />
+    <None Remove="Resources\WhiteTower.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\BlackBishop.png" />
+    <Resource Include="Resources\BlackKing.png" />
+    <Resource Include="Resources\BlackKnight.png" />
+    <Resource Include="Resources\BlackPawn.png" />
+    <Resource Include="Resources\BlackQueen.png" />
+    <Resource Include="Resources\BlackTower.png" />
+    <Resource Include="Resources\Circle.png" />
+    <Resource Include="Resources\Dot.png" />
+    <Resource Include="Resources\WhiteBishop.png" />
+    <Resource Include="Resources\WhiteKing.png" />
+    <Resource Include="Resources\WhiteKnight.png" />
+    <Resource Include="Resources\WhitePawn.png" />
+    <Resource Include="Resources\WhiteQueen.png" />
+    <Resource Include="Resources\WhiteTower.png" />
+  </ItemGroup>
+
+</Project>
