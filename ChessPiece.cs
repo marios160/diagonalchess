@@ -50,7 +50,7 @@ namespace DiagonalChess
 
         public bool IsOccupied(int row, int col)
         {
-            if (ChessBoard.Pieces.Where(p => p.Row == row && p.Column == col).Count() == 0)
+            if (ChessBoard.Pieces.Where(p => p.Row == row && p.Column == col && Type != ChessPieceTypes.Dot).Count() == 0)
                 return false;
             return true;
         }
